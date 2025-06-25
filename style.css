@@ -1,0 +1,630 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Background and overlay */
+.background-container {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('rr.jpg') no-repeat center center/cover;
+  opacity: 0.85; /* Adjust opacity here */
+  z-index: -2;
+  
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  z-index: 2;
+  position: relative;
+  top:-50px;
+}
+
+.logo {
+  height: 130px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.language-select {
+  padding: 0.4rem;
+  background: transparent;
+  color: white;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.sign-in {
+  background: red;
+  color: white;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Content */
+.content {
+  position: relative;
+  color: white;
+  text-align: center;
+  top: 25%;
+  padding: 0 1rem;
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.email-form input {
+  padding: 1rem;
+  width: 300px;
+  max-width: 90%;
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
+}
+
+.email-form button {
+  padding: 1rem 1.5rem;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.curved-top{
+border-top-right-radius:50% ;
+}
+
+/* Trending Section */
+.trending-section {
+  background-color: #000;
+  padding: 4rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+  color:white;
+  position:relative;
+  top:1px;
+}
+
+.trending-section h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+}
+
+/* Slider */
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  scrollbar-width: none;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 auto;
+  width: 180px;
+  transition: transform 0.3s ease;
+}
+.slide {
+  position: relative;
+  flex: 0 0 auto;
+  width: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center center;
+  cursor: pointer;
+}
+
+.slide:hover {
+  transform: scale(1.1);
+  z-index: 5;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+.slide img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+/* Rank Number */
+.rank {
+  position: absolute;
+  bottom: -12px;
+  left: -10px;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  -webkit-text-stroke: 1px black;
+  z-index: 2;
+}
+
+/* Slider Buttons */
+.slider-btn {
+  position: absolute;
+  top: 40%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.slider-btn.left {
+  left: 0;
+}
+
+.slider-btn.right {
+  right: 0;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+#d{
+  border-radius: 50%;
+}
+
+/* Exact Netflix curve with red border */
+.netflix-curve {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  background: transparent;
+  overflow: hidden;
+  z-index: 2;
+  margin-top: -10px;
+  bottom:535px;
+  border-color: transparent;
+}
+
+.netflix-curve svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-color: transparent;
+}
+#d{
+  border-color: azure;
+  border-radius: 100px;
+}
+/* More Reasons to Join Section */
+.reasons-section {
+  padding: 4rem 2rem;
+  background-color: #000;
+  color: white;
+position:relative;
+bottom:20px;
+}
+
+.reasons-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.reason-card {
+  background: linear-gradient(135deg, #1c1c3b, #111);
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center center;
+  cursor: pointer;
+
+}
+.reason-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.reason-card p {
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.reason-card img {
+  width: 48px;
+  height: 48px;
+  align-self: flex-end;
+  margin-top: 1.5rem;
+  opacity: 0.95;
+}
+.reason-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+  z-index: 5;
+}
+
+
+#x{
+  border-radius: 50%;
+}
+#xx{
+  
+  border-radius: 50%;
+}
+/* FAQ Section */
+.faq-section {
+  background-color: #000;
+  color: white;
+  padding: 4rem 2rem;
+  position:relative;
+  bottom:50px;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #222;
+  background-color: #333;
+  margin-bottom: 0.5rem;
+  transition: background 0.3s ease;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #4b4b4b;
+}
+
+.faq-icon {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  display: none;
+  padding: 1rem 1.5rem;
+  background-color: #222;
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+/* Call-to-action above footer */
+.footer-cta {
+  background-color: #000;
+  color: white;
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+}
+
+.footer-cta-heading {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-cta-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.footer-cta-form input[type="email"] {
+  width: 100%;
+  max-width: 450px;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.footer-cta-form button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.footer-cta-form button:hover {
+  background-color: #f6121d;
+}
+
+/* Netflix Footer Styles */
+.netflix-footer {
+  background-color: #000;
+  color: #757575;
+  font-size: 1rem;
+  padding: 3rem 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.footer-call {
+  margin-bottom: 2rem;
+  color: #999;
+}
+
+.footer-call a {
+  color: #999;
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  color: #757575;
+  text-decoration: underline;
+  line-height: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-select {
+  margin-bottom: 1rem;
+}
+
+.footer-select select {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.footer-country {
+  margin-bottom: 0.5rem;
+  color: #999;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  color: #757575;
+  margin-top: 1rem;
+}
+
+.footer-note a {
+  color: #999;
+  text-decoration: underline;
+}
+#bb{
+  position: relative;
+  bottom: 100px;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content h2 {
+    font-size: 1.3rem;
+  }
+
+  /* .logo {
+    height: 100px;
+  } */
+/* 
+  header {
+    padding: 1rem 2rem;
+  } */
+
+  .reason-card img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content h2 {
+    font-size: 1.1rem;
+  }
+
+  .email-form {
+    flex-direction: column;
+    align-items:center;
+  }
+
+
+
+  .footer-cta-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .slider-btn {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .rank {
+    font-size: 2.2rem;
+    bottom: -8px;
+    left: -6px;
+  }
+
+  
+  header {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .header-buttons {
+    flex-direction: row;
+  }
+
+  .reasons-section h2,
+  .faq-section h2 {
+    text-align: center;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 1.7rem;
+  }
+
+  .content h2 {
+    font-size: 1rem;
+  }
+
+  /* .logo {
+    height: 60px;
+  } */
+
+  .slider .slide {
+    width: 140px;
+  }
+
+  .rank {
+    font-size: 1.5rem;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-call,
+  .footer-note,
+  .footer-country {
+    text-align: center;
+  }
+}
